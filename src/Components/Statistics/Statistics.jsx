@@ -1,5 +1,25 @@
-import s from './Statistic.module.css';
+// import s from './Statistic.module.css';
+// import { labels } from '../Utils/labels';
+import shortid from 'short-id';
 
-function Statictic() {}
+function Statictic({ good, neutral, bad, total, positiveFeedback }) {
+  return (
+    <>
+      <h2>Statistics</h2>
+      <ul>
+        {/* {labels.map(label => (
+          <li key={shortid.generate()}>{label} :</li>
+        ))} */}
+        <li key={shortid.generate()}>Good: {good}</li>
+        <li key={shortid.generate()}>Neutral: {neutral}</li>
+        <li key={shortid.generate()}>Bad: {bad}</li>
+        <li key={shortid.generate()}>Total: {total}</li>
+        <li key={shortid.generate()}>
+          Positive Feedback: {positiveFeedback} %
+        </li>
+      </ul>
+    </>
+  );
+}
 
 export { Statictic };
