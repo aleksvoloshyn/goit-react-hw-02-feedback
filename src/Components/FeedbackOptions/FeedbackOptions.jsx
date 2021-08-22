@@ -1,6 +1,7 @@
 // import s from './FeedbackOptions.module.css';
 // import { labels } from '../Utils/labels';
 import shortid from 'short-id';
+import PropTypes from 'prop-types';
 
 function FeedbackOptions({ onLeaveFeedback }) {
   return (
@@ -21,5 +22,9 @@ function FeedbackOptions({ onLeaveFeedback }) {
     </>
   );
 }
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func,
+};
 
 export { FeedbackOptions };
