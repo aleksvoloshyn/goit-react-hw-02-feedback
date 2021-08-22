@@ -5,7 +5,6 @@ import shortid from 'short-id';
 function FeedbackOptions({ onLeaveFeedback }) {
   return (
     <>
-      <h2>Please leave feedbak</h2>
       <ul>
         <li key={shortid.generate()}>
           <button type="button" onClick={() => onLeaveFeedback('good')}>

@@ -2,6 +2,7 @@ import React from 'react';
 import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
 import { Statictic } from '../Statistics/Statistics';
 import { Notification } from '../Notification/Notification';
+import { Section } from '../Section/Section';
 
 // import s from './Wrapper.module.css';
 
@@ -19,12 +20,12 @@ class Wrapper extends React.Component {
   render() {
     return (
       <>
-        <section>
+        <Section title="Please leave feedbak">
           <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
-        </section>
+        </Section>
 
         {Object.values(this.state).find(val => val !== 0) ? (
-          <section>
+          <Section title="Statistics">
             <Statictic
               good={this.state.good}
               neutral={this.state.neutral}
@@ -36,11 +37,11 @@ class Wrapper extends React.Component {
                   100,
               )}
             />
-          </section>
+          </Section>
         ) : (
-          <section>
+          <Section>
             <Notification message="No feedback given" />
-          </section>
+          </Section>
         )}
       </>
     );

@@ -5,7 +5,6 @@ import shortid from 'short-id';
 function Statictic({ good, neutral, bad, total, positiveFeedback }) {
   return (
     <>
-      <h2>Statistics</h2>
       <ul>
         {/* {labels.map(label => (
           <li key={shortid.generate()}>{label} :</li>
