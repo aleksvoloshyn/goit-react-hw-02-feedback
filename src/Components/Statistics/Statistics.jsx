@@ -1,5 +1,6 @@
 // import s from './Statistic.module.css';
 // import { labels } from '../Utils/labels';
+import PropTypes from 'prop-types';
 import shortid from 'short-id';
 
 function Statictic({ good, neutral, bad, total, positiveFeedback }) {
@@ -20,5 +21,13 @@ function Statictic({ good, neutral, bad, total, positiveFeedback }) {
     </>
   );
 }
+
+Statictic.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positiveFeedback: PropTypes.string,
+};
 
 export { Statictic };
