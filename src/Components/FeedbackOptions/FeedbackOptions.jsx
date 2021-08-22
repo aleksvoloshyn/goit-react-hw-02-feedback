@@ -3,11 +3,19 @@
 import shortid from 'short-id';
 import PropTypes from 'prop-types';
 
-function FeedbackOptions({ onLeaveFeedback }) {
+function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <>
       <ul>
-        <li key={shortid.generate()}>
+        {options.map(val => (
+          <li key={shortid.generate()}>
+            <button type="button" onClick={() => onLeaveFeedback(val)}>
+              {val}
+            </button>
+          </li>
+        ))}
+
+        {/* <li key={shortid.generate()}>
           <button type="button" onClick={() => onLeaveFeedback('good')}>
             Good
           </button>
@@ -17,7 +25,7 @@ function FeedbackOptions({ onLeaveFeedback }) {
           <button type="button" onClick={() => onLeaveFeedback('bad')}>
             Bad
           </button>
-        </li>
+        </li> */}
       </ul>
     </>
   );

@@ -27,7 +27,7 @@ Statictic.propTypes = {
   neutral: PropTypes.number,
   bad: PropTypes.number,
   total: PropTypes.number,
-  positiveFeedback: PropTypes.string,
+  positiveFeedback: PropTypes.number,
 };
 
 export { Statictic };
