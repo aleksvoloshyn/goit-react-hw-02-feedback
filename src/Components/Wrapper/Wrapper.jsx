@@ -4,7 +4,7 @@ import { Statictic } from '../Statistics/Statistics';
 import { Notification } from '../Notification/Notification';
 import { Section } from '../Section/Section';
 
-// import s from './Wrapper.module.css';
+import s from './Wrapper.module.css';
 
 class Wrapper extends React.Component {
   state = {
@@ -28,7 +28,7 @@ class Wrapper extends React.Component {
 
   render() {
     return (
-      <>
+      <div className={s.container}>
         <Section title="Please leave feedbak">
           <FeedbackOptions
             options={Object.keys(this.state)}
@@ -53,7 +53,7 @@ class Wrapper extends React.Component {
             <Notification message="No feedback given" />
           </Section>
         )}
-      </>
+      </div>
     );
   }
 }
